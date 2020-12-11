@@ -6,22 +6,22 @@ import Button from './Button'
 import { ButtonProps } from './Button.types'
 
 describe('Test Component', () => {
-  let props: ButtonProps
+	let props: ButtonProps
 
-  beforeEach(() => {
-    props = {
-      foo: 'bar'
-    }
-  })
+	beforeEach(() => {
+		props = {
+			theme: 'primary',
+		}
+	})
 
-  const renderComponent = () => render(<Button {...props} />)
+	const renderComponent = () => render(<Button {...props} />)
 
-  it('should render foo text correctly', () => {
-    props.foo = 'test text here'
-    const { getByTestId } = renderComponent()
+	it('should render foo text correctly', () => {
+		props.theme = 'primary'
+		const { getByTestId } = renderComponent()
 
-    const component = getByTestId('Button')
+		const component = getByTestId('Button')
 
-    expect(component).toHaveTextContent('test text here')
-  })
+		expect(component).toHaveTextContent('primary')
+	})
 })
