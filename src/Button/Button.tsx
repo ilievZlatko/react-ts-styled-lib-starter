@@ -26,7 +26,7 @@ const StyledDescription = styled.h2``
 const Button: React.FC<ButtonProps> = ({ theme }) => (
 	<StyledDiv data-testid='test-component' theme={theme}>
 		<StyledHeading className='heading'>I'm the test component</StyledHeading>
-		<StyledDescription>Made with love by Harvey</StyledDescription>
+		<StyledDescription>Made with love by Zlatko</StyledDescription>
 	</StyledDiv>
 )
 
